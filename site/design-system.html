@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design system · VS Artes pelas Mãos</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="assets/marca/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Figtree:wght@400;500;600;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+  <style>
+    .ds section { padding-block: var(--s-7); }
+    .ds h2 { font-size: var(--fs-4); margin-bottom: var(--s-2); }
+    .ds .sub { color: var(--ink-soft); margin-bottom: var(--s-6); max-width: 60ch; }
+    .sw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--s-4); }
+    .sw { border-radius: var(--r-md); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-soft); }
+    .sw .chip-c { height: 84px; display: flex; align-items: flex-end; padding: .6rem .8rem; font: 700 var(--fs-0)/1 var(--font-body); }
+    .sw .meta { padding: .7rem .8rem .9rem; font-size: var(--fs-0); line-height: 1.45; }
+    .sw code { font: 600 .8rem/1 ui-monospace, Consolas, monospace; }
+    .sw .ratio { display: block; color: var(--ink-soft); }
+    .ok { color: #17683a; font-weight: 700; } .no { color: #B3261E; font-weight: 700; }
+    .row { display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
+    .box { background: var(--surface); padding: var(--s-5); border-radius: var(--r-md); box-shadow: var(--shadow-soft); }
+    .type-spec { display: grid; gap: var(--s-4); }
+    .type-spec > div { display: grid; grid-template-columns: 9rem 1fr; gap: var(--s-4); align-items: baseline; border-bottom: 1px dashed var(--line); padding-bottom: var(--s-3); }
+    .type-spec small { color: var(--ink-soft); font-size: var(--fs-0); }
+    .space-row { display: flex; align-items: center; gap: var(--s-4); margin-bottom: .5rem; font-size: var(--fs-0); }
+    .space-row i { display: block; height: 14px; background: var(--pink); border-radius: 3px; }
+    .demo-motion .sticker { width: 220px; }
+    .rules li { margin-bottom: .5rem; }
+    .dont, .do { padding: var(--s-5); border-radius: var(--r-md); }
+    .dont { background: #FBECEA; }
+    .do { background: #E8F4EC; }
+  </style>
+</head>
+<body class="ds">
+<header class="site-header"><div class="container">
+  <a class="brand" href="index.html" aria-label="Voltar ao site"><img src="assets/marca/logo-sm.png" alt="VS arte pelas mãos"></a>
+  <nav class="nav" aria-label="Design system"><a href="#cores">Cores</a><a href="#tipo">Tipografia</a><a href="#espaco">Espaço</a><a href="#componentes">Componentes</a><a href="#movimento">Movimento</a><a class="btn" href="index.html">Ver o site</a></nav>
+</div></header>
+
+<main class="container">
+  <section>
+    <p class="hand">proposta 1 · calma</p>
+    <h1 style="font-size:var(--fs-5)">Design system</h1>
+    <p class="lede" style="max-width:56ch;margin-top:var(--s-4)">Uma mesa de ateliê calma: branco-rosado e tinta ameixa, rosa-chiclete só onde há ação, fotos como adesivos recortados e uma linha de costura que costura a página. Tudo vive em <code>css/tokens.css</code> e <code>css/site.css</code>.</p>
+  </section>
+
+  <section id="cores">
+    <h2>Cores</h2>
+    <p class="sub">Tiradas da logo e suavizadas. A cor forte da marca fica nas ações e nos detalhes; os fundos são quase brancos. As razões de contraste abaixo são calculadas ao abrir a página.</p>
+    <div class="sw-grid" id="swatches"></div>
+  </section>
+
+  <section id="tipo">
+    <h2>Tipografia</h2>
+    <p class="sub">Fredoka nos títulos (arredondada, parente do lettering da logo, mas mais calma), Figtree no texto corrido e Caveat só para notas à mão.</p>
+    <div class="box type-spec">
+      <div><small>Título 1 · Fredoka 600</small><h1>Peças com o seu nome</h1></div>
+      <div><small>Título 2 · Fredoka 600</small><h2 style="font-size:var(--fs-5);margin:0">Tudo feito sob encomenda</h2></div>
+      <div><small>Título 3 · Fredoka 600</small><h3>Cadernetas e agendas</h3></div>
+      <div><small>Texto · Figtree 400</small><p>Você escolhe o tema, o nome e as cores. A gente cuida do resto, com capricho em cada detalhe.</p></div>
+      <div><small>Apoio · Figtree 400</small><p class="muted">Texto de apoio em tinta suave, sempre acima de 6:1 de contraste.</p></div>
+      <div><small>Nota · Caveat 600</small><p class="hand">com o nome de quem vai usar</p></div>
+      <div><small>Destaque · pesponto</small><p style="font-size:var(--fs-4);font-family:var(--font-display);font-weight:600">O seu <span class="stitch-u">nome</span> na capa</p></div>
+    </div>
+  </section>
+
+  <section id="espaco">
+    <h2>Espaço, forma e sombra</h2>
+    <p class="sub">Ritmo de 8 px. Cantos arredondados em três níveis. Uma única sombra para o “adesivo” e uma para quando ele levanta.</p>
+    <div class="row" style="align-items:flex-start;gap:var(--s-8)">
+      <div class="box">
+        <div class="space-row"><i style="width:var(--s-1)"></i>--s-1 · 4</div>
+        <div class="space-row"><i style="width:var(--s-2)"></i>--s-2 · 8</div>
+        <div class="space-row"><i style="width:var(--s-4)"></i>--s-4 · 16</div>
+        <div class="space-row"><i style="width:var(--s-5)"></i>--s-5 · 24</div>
+        <div class="space-row"><i style="width:var(--s-6)"></i>--s-6 · 32</div>
+        <div class="space-row"><i style="width:var(--s-7)"></i>--s-7 · 48</div>
+        <div class="space-row"><i style="width:var(--s-8)"></i>--s-8 · 72</div>
+      </div>
+      <div class="row">
+        <div class="box" style="border-radius:var(--r-sm);width:110px;height:80px">sm · 12</div>
+        <div class="box" style="border-radius:var(--r-md);width:110px;height:80px">md · 20</div>
+        <div class="box" style="border-radius:var(--r-lg);width:110px;height:80px">lg · 28</div>
+        <div class="box" style="border-radius:var(--r-pill);width:110px;height:80px;display:grid;place-items:center">pílula</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="componentes">
+    <h2>Componentes</h2>
+
+    <h3 style="margin:var(--s-6) 0 var(--s-4)">Botões</h3>
+    <div class="row box">
+      <button class="btn" type="button">Peça seu orçamento</button>
+      <button class="btn btn--ghost" type="button">Falar no WhatsApp</button>
+      <button class="btn btn--wa" type="button">Abrir o WhatsApp</button>
+      <button class="btn" type="button" disabled>Enviando…</button>
+    </div>
+    <p class="sub" style="margin-top:var(--s-3)">Costura tracejada interna em todo botão. Um único botão principal por tela; o resto é contorno.</p>
+
+    <h3 style="margin:var(--s-6) 0 var(--s-4)">Filtros</h3>
+    <div class="row box"><button class="chip" aria-pressed="true">Todas</button><button class="chip" aria-pressed="false">Festa e decoração</button><button class="chip" aria-pressed="false">Arte em feltro</button></div>
+
+    <h3 style="margin:var(--s-6) 0 var(--s-4)">Adesivo (foto com contorno)</h3>
+    <div class="row box bg-tint" style="background:var(--tint)">
+      <figure class="sticker" style="width:220px"><img src="assets/fotos/caderneta-vacinacao-ursinho.jpg" alt="Caderneta azul com ursinho"></figure>
+      <figure class="piece" style="width:240px;margin:0"><div class="sticker"><img src="assets/fotos/festa-patinhos.jpg" alt="Patinhos de centro de mesa"></div>
+        <figcaption><h3>Centro de mesa · Patinhos</h3><p>Enfeites com haste e base transparente.</p><button class="want" type="button">Quero um assim →</button></figcaption></figure>
+    </div>
+
+    <h3 style="margin:var(--s-6) 0 var(--s-4)">Campos de formulário</h3>
+    <div class="box" style="max-width:520px">
+      <div class="field"><label for="d1">Nome que vai na capa <span class="opt">(opcional)</span></label><input id="d1" placeholder="Ex.: Helena"></div>
+      <div class="field"><label for="d2">WhatsApp com DDD</label><input id="d2" aria-invalid="true" value="71 9"><div class="err" role="alert">Informe o WhatsApp com DDD. Ex.: 71 99999-9999</div></div>
+      <label class="check"><input type="checkbox"> <span>Autorizo a VS Artes pelas Mãos a usar meu nome e WhatsApp só para responder a este pedido.</span></label>
+    </div>
+
+    <h3 style="margin:var(--s-6) 0 var(--s-4)">Blocos de seção</h3>
+    <div class="row">
+      <div class="box" style="background:var(--bg);flex:1;min-width:200px;box-shadow:inset 0 0 0 1px var(--line)">fundo · <code>--bg</code></div>
+      <div class="box" style="background:var(--tint);flex:1;min-width:200px">catálogo · <code>--tint</code></div>
+      <div class="box" style="background:var(--wash-pink);flex:1;min-width:200px">orçamento · <code>--wash-pink</code></div>
+      <div class="box" style="background:var(--wash-turq);flex:1;min-width:200px">empresas · <code>--wash-turq</code></div>
+    </div>
+  </section>
+
+  <section id="movimento" class="demo-motion">
+    <h2>Movimento</h2>
+    <p class="sub">Um ritmo só. Os adesivos “pousam” ao aparecer, levantam um pouco ao passar o mouse, e a linha de costura se desenha na margem conforme a rolagem. Tudo é desligado para quem pede menos movimento.</p>
+    <div class="row box">
+      <div><strong>Tempos</strong><br>rápido 160 ms · base 280 ms · lento 600 ms</div>
+      <div><strong>Curva</strong><br><code>cubic-bezier(.22, .8, .24, 1)</code></div>
+      <div><strong>Só anima</strong><br>transform e opacidade</div>
+    </div>
+    <div class="row" style="margin-top:var(--s-5)"><figure class="sticker" style="width:220px"><img src="assets/fotos/feltro-ganso.jpg" alt="Ganso de feltro"></figure><p class="muted">Passe o mouse no adesivo ao lado.</p></div>
+  </section>
+
+  <section>
+    <h2>Regras</h2>
+    <div class="row" style="align-items:flex-start;gap:var(--s-7)">
+      <div class="do" style="flex:1;min-width:260px"><strong>Faça</strong>
+        <ul class="rules"><li>Deixe as fotos reais mandarem; a interface fica de lado.</li><li>Use o rosa forte só em ação.</li><li>Todo produto termina em “faça seu orçamento”.</li><li>Alvos de toque de 44 px ou mais.</li></ul></div>
+      <div class="dont" style="flex:1;min-width:260px"><strong>Não faça</strong>
+        <ul class="rules"><li>Nenhum preço, prazo ou depoimento que a Viviane não tenha confirmado.</li><li>Nada de fundo colorido atrás de texto longo.</li><li>Sem emoji como ícone.</li><li>Sem animação que não tenha um motivo.</li></ul></div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  function lum(h) { var c = [1, 3, 5].map(function (i) { var v = parseInt(h.substr(i, 2), 16) / 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; }
+  function ratio(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); }
+  var cs = getComputedStyle(document.documentElement);
+  var v = function (n) { return cs.getPropertyValue(n).trim(); };
+  var list = [
+    ["--ink", "Tinta", "texto principal", "--bg"], ["--ink-soft", "Tinta suave", "texto de apoio", "--bg"],
+    ["--pink-strong", "Rosa de ação", "botões e links", "#FFFFFF", true], ["--pink", "Rosa da marca", "decoração", "--bg"],
+    ["--pink-deep", "Rosa fundo", "hover do botão", "#FFFFFF", true], ["--turq-deep", "Turquesa texto", "rótulos na seção de empresas", "--wash-turq"],
+    ["--turq", "Turquesa da marca", "decoração", "--bg"], ["--yellow", "Amarelo", "decoração", "--bg"], ["--lilac", "Lilás", "decoração", "--bg"], ["--leaf", "Verde-folha", "decoração", "--bg"],
+    ["--bg", "Fundo", "página", "--ink"], ["--tint", "Rosado do catálogo", "onde o adesivo branco aparece", "--ink"],
+    ["--wash-pink", "Orçamento", "fundo do formulário", "--ink"], ["--wash-turq", "Empresas", "fundo da seção", "--ink"],
+    ["--wash-butter", "Manteiga", "reserva", "--ink"], ["--wash-lilac", "Lilás claro", "reserva", "--ink"]
+  ];
+  document.getElementById("swatches").innerHTML = list.map(function (c) {
+    var hex = v(c[0]), ref = c[3].charAt(0) === "#" ? c[3] : v(c[3]), r = ratio(hex, ref);
+    var onChip = lum(hex) > .35 ? "#3A2433" : "#FFFFFF";
+    var deco = c[2] === "decoração" || c[2] === "reserva";
+    var verdict = deco ? '<span class="ratio">só decorativo</span>' : '<span class="ratio ' + (r >= 4.5 ? "ok" : "no") + '">' + r.toFixed(1) + ":1 sobre " + (c[3].charAt(0) === "#" ? "branco" : c[3].replace("--", "")) + (r >= 4.5 ? " ✓ AA" : " ✗") + "</span>";
+    return '<div class="sw"><div class="chip-c" style="background:' + hex + ";color:" + onChip + '">' + c[1] + '</div><div class="meta"><code>' + c[0] + " " + hex + "</code><br>" + c[2] + verdict + "</div></div>";
+  }).join("");
+})();
+</script>
+</body>
+</html>

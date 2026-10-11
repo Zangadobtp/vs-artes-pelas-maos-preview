@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VS Artes pelas Mãos · Peças personalizadas feitas à mão</title>
+  <meta name="description" content="Cadernetas de vacinação, agendas, decoração de festa, arte em feltro e brindes personalizados com gravação a laser. Feito à mão, com o seu nome e a sua história. Peça seu orçamento.">
+  <meta name="theme-color" content="#FFFAFC">
+  <link rel="icon" type="image/png" href="assets/marca/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Figtree:wght@400;500;600;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<!--
+THESIS: Uma mesa de ateliê calma onde cada peça é um adesivo recortado; a linha de costura da logo costura a página. Recusa a vitrine de e-commerce rosa-choque.
+OWN-WORLD: Branco-rosado e tinta ameixa; rosa-chiclete só em ação (botões, pesponto). Fotos com contorno branco e sombra suave, divisórias tracejadas de linha de corte, títulos Fredoka, notas Caveat.
+STORY: A visitante vê o trabalho real, entende que tudo leva o nome dela e pede um orçamento em menos de um minuto.
+FIRST VIEWPORT: Esquerda, promessa e dois botões (orçamento, WhatsApp); direita, três adesivos de caderneta em leque. Ação primária à esquerda, abaixo do título.
+FORM: Proposta 1 (calma), definida com a cliente após a logo; seed 1fdaac04 substituído por direção fixada pela marca.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#topo" aria-label="VS Artes pelas Mãos, início"><img src="assets/marca/logo-sm.png" alt="VS arte pelas mãos" width="480" height="318"></a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#catalogo">Peças</a>
+      <a href="#como">Como funciona</a>
+      <a href="#empresas">Para empresas</a>
+      <a href="#sobre">Sobre</a>
+      <a class="btn" href="#orcamento" data-pedido>Peça seu orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <svg class="stitch-line" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="stitch-mask" maskUnits="userSpaceOnUse" x="-200" y="0" width="4000" height="20000">
+        <path id="stitch-mask-path" d="" stroke="#fff" stroke-width="8" fill="none"/>
+      </mask>
+    </defs>
+    <path id="stitch-path" d="" mask="url(#stitch-mask)"/>
+  </svg>
+
+  <section class="hero" id="topo" data-stitch>
+    <div class="container">
+      <div>
+        <p class="kicker hand">feito à mão, do seu jeitinho</p>
+        <h1>Peças com o seu <span class="stitch-u">nome</span> e a sua história.</h1>
+        <p class="lede">Cadernetas, agendas, festa, feltro e brindes personalizados, criados um a um no ateliê.</p>
+        <div class="actions">
+          <a class="btn" href="#orcamento" data-pedido>Peça seu orçamento</a>
+          <a class="btn btn--ghost" href="#" data-wa target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.1.82.83-3.02-.2-.31a8.1 8.1 0 1 1 7.02 3.85Zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+            Falar no WhatsApp</a>
+        </div>
+        <ul class="tags" aria-label="Ver por categoria">
+          <li><a href="#catalogo" data-filtro="cadernetas">Cadernetas e agendas</a></li>
+          <li><a href="#catalogo" data-filtro="festa">Festa</a></li>
+          <li><a href="#catalogo" data-filtro="feltro">Feltro</a></li>
+          <li><a href="#catalogo" data-filtro="brindes">Brindes e laser</a></li>
+        </ul>
+      </div>
+      <div class="fan" aria-label="Exemplos do que sai do ateliê">
+        <figure class="sticker" style="left:0;top:4%;width:44%;--r:-5deg;z-index:2"><img src="assets/fotos/caderneta-vacinacao-fadinha.jpg" alt="Caderneta de vacinação com capa de fadinha lilás entre flores" width="1254" height="1254" fetchpriority="high"><figcaption class="tag">Cadernetas</figcaption></figure>
+        <figure class="sticker" style="left:37%;top:9%;width:33%;--r:3deg;z-index:3"><img src="assets/fotos/festa-pato-baloes.jpg" alt="Patinho de papelaria com chapéu de festa, laço rosa e balões" width="1000" height="1006"><figcaption class="tag">Festa</figcaption></figure>
+        <figure class="sticker" style="left:72%;top:0;width:25%;--r:5deg;z-index:1"><img src="assets/fotos/laser-caixa-mdf-paizao.jpg" alt="Caixa de MDF gravada a laser com a frase Para o melhor paizão do mundo" width="284" height="470"><figcaption class="tag">Laser</figcaption></figure>
+        <figure class="sticker" style="left:3%;top:55%;width:29%;--r:-3deg;z-index:3"><img src="assets/fotos/brindes-bottons-cartela.jpg" alt="Cartela com quatro bottons personalizados" width="1078" height="1078" loading="lazy"><figcaption class="tag">Bottons</figcaption></figure>
+        <figure class="sticker" style="left:55%;top:52%;width:38%;--r:-2deg;z-index:4"><img src="assets/fotos/feltro-ganso-perfil.jpg" alt="Ganso de feltro creme de perfil, com laço de tecido florido" width="1000" height="1002" loading="lazy"><figcaption class="tag">Feltro</figcaption></figure>
+      </div>    </div>
+  </section>
+
+  <hr class="cut container">
+
+<section class="bg-tint" id="catalogo" data-stitch>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Tudo feito sob encomenda</h2>
+        <p>Você escolhe o tema, o nome e as cores, e a gente cuida do resto. Gostou de uma peça? Toque em “Quero um assim” e conte o que muda.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar peças"></div>
+      <div class="gallery" id="gallery" aria-live="polite"></div>
+      <p class="gallery-note">Não achou o que imagina? <a href="#orcamento" data-pedido="outro"><strong>Conte sua ideia</strong></a>. Se dá para fazer à mão, a gente tenta.</p>
+    </div>
+  </section>
+
+  <section id="como" data-stitch>
+    <div class="container">
+      <div class="section-head reveal"><h2>Como pedir</h2></div>
+      <ol class="steps">
+        <li class="reveal" style="--i:0"><h3>Conte sua ideia</h3><p>Preencha o pedido aqui no site ou chame no WhatsApp. Pode mandar fotos e referências.</p></li>
+        <li class="reveal" style="--i:1"><h3>Receba a arte e o orçamento</h3><p>A Viviane responde pelo WhatsApp com a proposta, e você aprova antes de começar.</p></li>
+        <li class="reveal" style="--i:2"><h3>Produção e entrega</h3><p>Sua peça é feita com calma. Prazo e entrega são combinados no orçamento.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bg-turq" id="empresas" data-stitch>
+    <div class="container biz">
+      <div class="reveal">
+        <p class="kicker hand" style="color:var(--turq-deep)">brindes para empresas</p>
+        <h2>Sua marca em peças que as pessoas guardam</h2>
+        <ul>
+          <li>Chaveiro abridor</li><li>Canetas</li><li>Bottons</li><li>Copos e garrafas</li>
+          <li>Tábuas de madeira</li><li>Cadernos e agendas</li>
+        </ul>
+        <p class="muted" style="margin-bottom:var(--s-6)">Gravação a laser e impressão com a logo da empresa, em qualquer quantidade. Conte quantas peças e para quando.</p>
+        <a class="btn" href="#orcamento" data-pedido="empresa">Orçamento para empresa</a>
+      </div>
+      <div class="pair reveal" style="--i:1">
+        <figure class="sticker"><img src="assets/fotos/brinde-chaveiros-casinha-lote.jpg" alt="Chaveiros de MDF em formato de casinha com frase gravada" loading="lazy"></figure>
+        <figure class="sticker"><img src="assets/fotos/brinde-chaveiro-casinha.jpg" alt="Chaveiro de MDF em formato de casinha com frase gravada a laser" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" data-stitch>
+    <div class="container about">
+      <img class="logo-big reveal" src="assets/marca/logo.png" alt="Logo VS arte pelas mãos: boneca loira com carretel, pincel e tesoura" loading="lazy" width="1000" height="664">
+      <div class="reveal" style="--i:1">
+        <h2>Quem faz é a Viviane</h2>
+        <blockquote>“Cada peça que crio carrega um pouquinho de mim, da minha criatividade, dos meus sonhos e de toda a dedicação.”
+          <cite>Viviane Santos de Souza, VS Artes pelas Mãos</cite></blockquote>
+        <p class="muted">As iniciais VS são dela. Feltro, papelaria, decoração de festa e gravação a laser saem do mesmo ateliê, sempre à mão e com carinho.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-pink" id="orcamento" data-stitch>
+    <div class="container quote">
+      <div class="intro reveal">
+        <h2>Peça seu orçamento</h2>
+        <p>Conte o que você quer. Em seguida abrimos o WhatsApp com tudo escrito, é só enviar.</p>
+        <p class="alt muted">Prefere falar direto?</p>
+        <ul class="direct"><li><a href="#" data-wa target="_blank" rel="noopener">Chame no WhatsApp</a></li><li><a href="https://instagram.com/vsartepelasmaosres" target="_blank" rel="noopener">Instagram @vsartepelasmaosres</a></li></ul>
+      </div>
+      <div class="form-card reveal" style="--i:1">
+        <form id="form-orcamento" novalidate>
+          <fieldset>
+            <legend>O que você quer?</legend>
+            <div class="field">
+              <label for="tipo">Tipo de pedido</label>
+              <select id="tipo" name="tipo" required></select>
+            </div>
+            <div id="dyn" aria-live="polite"></div>
+            <div class="field">
+              <label for="detalhes">Mais detalhes <span class="opt">(opcional)</span></label>
+              <textarea id="detalhes" name="detalhes" placeholder="Cores, referências, o que for importante"></textarea>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Como falamos com você?</legend>
+            <div class="cols2">
+              <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+              <div class="field"><label for="whats">WhatsApp com DDD</label><input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="71 99999-9999" required></div>
+            </div>
+            <div class="field">
+              <label for="origem">Como nos conheceu? <span class="opt">(opcional)</span></label>
+              <select id="origem" name="origem">
+                <option value="">Prefiro não dizer</option><option>Instagram</option><option>Google</option><option>Indicação de amigo ou familiar</option><option>Outro</option>
+              </select>
+            </div>
+            <div class="hp" aria-hidden="true"><label for="site">Não preencha este campo</label><input type="text" id="site" name="site" tabindex="-1" autocomplete="off"></div>
+            <div id="turnstile"></div>
+            <label class="check"><input type="checkbox" id="consent" name="consent"> <span>Autorizo a VS Artes pelas Mãos a usar meu nome e WhatsApp só para responder a este pedido. Leia a <a href="privacidade.html" target="_blank" rel="noopener">política de privacidade</a>.</span></label>
+          </fieldset>
+          <div class="submit-row">
+            <button class="btn" type="submit">Continuar para o WhatsApp</button>
+            <span class="fine">Sem preço aqui: o valor vem no orçamento.</span>
+          </div>
+        </form>
+        <div class="done" id="done" aria-live="polite">
+          <h3>Pedido pronto!</h3>
+          <p class="muted">Confira a mensagem e toque no botão. O WhatsApp abre com tudo escrito.</p>
+          <p class="fine" id="status-envio" role="status" aria-live="polite"></p>
+          <pre id="preview"></pre>
+          <div class="submit-row">
+            <a class="btn btn--wa" id="wa-open" href="#" target="_blank" rel="noopener">Abrir o WhatsApp</a>
+            <button class="btn btn--ghost" type="button" id="novo-pedido">Fazer outro pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div><p class="foot-name">VS Artes pelas Mãos</p><p>Peças personalizadas feitas à mão, com carinho.</p></div>
+    <div>
+      <h3>Fale com a gente</h3>
+      <ul>
+        <li><a href="#" data-wa target="_blank" rel="noopener">WhatsApp (71) 99906-5792</a></li>
+        <li><a href="https://instagram.com/vsartepelasmaosres" target="_blank" rel="noopener">@vsartepelasmaosres</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>No site</h3>
+      <ul><li><a href="#catalogo">Peças</a></li><li><a href="#como">Como pedir</a></li><li><a href="#empresas">Para empresas</a></li><li><a href="#orcamento">Orçamento</a></li><li><a href="privacidade.html">Política de privacidade</a></li><li><button type="button" id="cookie-prefs" class="link-btn" hidden>Preferências de cookies</button></li></ul>
+    </div>
+    <p class="legal">© <span id="ano">2026</span> VS Artes pelas Mãos · Viviane Santos de Souza. Os valores são sempre combinados no orçamento.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.1.82.83-3.02-.2-.31a8.1 8.1 0 1 1 7.02 3.85Zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+</a>
+
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/catalogo.js"></script>
+<script src="js/pedido-logica.js"></script>
+<script src="js/marketing.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
