@@ -106,6 +106,31 @@
       if (slugs.indexOf(a.dataset.filtro) < 0) { var li = a.closest("li"); if (li) li.remove(); }
     });
   });
+
+  /* ---------- galeria "Mais do ateliê" ---------- */
+  (function () {
+    var lista = window.VS_GALERIA || [], box = $("#mosaic"), lb = $("#lightbox");
+    if (!box || !lb || !lista.length) return;
+    var foto = lb.querySelector("img"), atual = 0;
+    function mostrar(i) {
+      atual = (i + lista.length) % lista.length;
+      foto.src = "assets/galeria/" + lista[atual].img + ".jpg"; foto.alt = lista[atual].alt;
+    }
+    lista.forEach(function (g, i) {
+      var li = document.createElement("li"), b = document.createElement("button"), im = document.createElement("img");
+      b.type = "button"; b.setAttribute("aria-label", "Ampliar: " + g.alt);
+      im.src = "assets/galeria/" + g.img + ".jpg"; im.alt = g.alt; im.loading = "lazy"; im.decoding = "async"; im.width = 600; im.height = 600;
+      b.appendChild(im); li.appendChild(b); box.appendChild(li);
+      b.addEventListener("click", function () { mostrar(i); lb.showModal(); });
+    });
+    lb.querySelector(".lb-close").addEventListener("click", function () { lb.close(); });
+    lb.querySelector(".lb-prev").addEventListener("click", function () { mostrar(atual - 1); });
+    lb.querySelector(".lb-next").addEventListener("click", function () { mostrar(atual + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+    lb.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") mostrar(atual - 1); else if (e.key === "ArrowRight") mostrar(atual + 1);
+    });
+  })();
   /* ---------- formulário de orçamento ---------- */
   var form = $("#form-orcamento"), tipoSel = $("#tipo"), dyn = $("#dyn");
   var pecaRef = "";

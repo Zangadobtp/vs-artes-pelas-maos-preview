@@ -96,6 +96,22 @@ window.VS_PRODUTOS = [
     alt: "Peça de MDF com desenho gravado de Nossa Senhora em pé sobre base redonda" }
 ];
 
+/* Galeria "Mais do ateliê": só mostra o trabalho, sem botão de pedido. Fotos em assets/galeria. */
+window.VS_GALERIA = [
+  { img: "copo-cafe-bege-nome", alt: "Copo térmico bege com xícara de café e o nome Roberta Emanuele gravados" },
+  { img: "caderneta-borboletas-l", alt: "Caderneta de saúde rosa com borboletas e a inicial L em vinho" },
+  { img: "garrafa-rosa-pinceis", alt: "Garrafa térmica rosa com pincéis e folhinhas gravados e o nome Ludmilla" },
+  { img: "caderneta-fada-ruiva", alt: "Caderneta de vacinação com menina ruiva de vestido vermelho em jardim com laços" },
+  { img: "taca-rosa-pets", alt: "Taça térmica rosa com desenho de quatro cachorrinhos e o nome Vivi" },
+  { img: "festa-caixinhas-cha", alt: "Caixinhas de lembrancinha de chá de bebê com ursinho e balões" },
+  { img: "copo-forca-foco-cafe", alt: "Copo térmico bege com a frase força, foco e (ca)fé" },
+  { img: "caderneta-ursinho-aviador", alt: "Caderneta de saúde azul com ursinho aviador entre nuvens" },
+  { img: "festa-pomba-divino-mdf", alt: "Divino Espírito Santo em MDF vazado, com raios dourados" },
+  { img: "caderneta-letra-l-rosa", alt: "Caderneta de vacina rosa com inicial L, florzinhas e o nome Laura Sophie" },
+  { img: "festa-caixinhas-floral", alt: "Caixinhas de lembrancinha floridas com janela transparente" },
+  { img: "caderneta-princesa", alt: "Caderneta de vacinação lilás com princesa ilustrada e castelo" }
+];
+
 /* Campos que mudam conforme o tipo de pedido. */
 window.VS_PEDIDOS = {
   caderneta: { rotulo: "Caderneta de vacinação ou saúde", campos: [

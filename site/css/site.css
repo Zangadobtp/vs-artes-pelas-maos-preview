@@ -128,6 +128,22 @@ section { position: relative; z-index: 1; padding-block: var(--s-9); }
   .fan .sticker:hover { transform: translateY(-8px) rotate(calc(var(--r) + 1.5deg)); z-index: 5; }
 }
 
+/* ---------- galeria "Mais do ateliê" ---------- */
+.mosaic { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4); }
+.mosaic button { display: block; width: 100%; padding: 6px; border: 0; background: var(--surface); border-radius: 22px; cursor: zoom-in; box-shadow: 0 10px 26px -18px rgba(58,36,51,.45); transition: transform var(--t-fast, .2s) var(--ease); }
+.mosaic img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 17px; }
+@media (hover: hover) { .mosaic button:hover { transform: translateY(-4px) rotate(-.8deg); } }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; width: 100%; height: 100%; }
+.lightbox::backdrop { background: rgba(40,24,34,.88); }
+.lightbox[open] { display: flex; align-items: center; justify-content: center; }
+.lightbox img { max-width: min(92vw, 820px); max-height: 82vh; border-radius: 18px; background: #fff; }
+.lb-close, .lb-nav { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,.95); color: var(--ink); font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.lb-close { top: 16px; right: 16px; }
+.lb-prev { left: 12px; } .lb-next { right: 12px; }
+.lb-nav { top: 50%; transform: translateY(-50%); }
+@media (max-width: 1000px) { .mosaic { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .mosaic { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); } .mosaic button { border-radius: 18px; padding: 5px; } .mosaic img { border-radius: 13px; } .lb-prev { left: 4px; } .lb-next { right: 4px; } }
+
 /* ---------- categorias ---------- */
 .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-5); }
 .cat { text-decoration: none; display: flex; flex-direction: column; gap: var(--s-4); }
