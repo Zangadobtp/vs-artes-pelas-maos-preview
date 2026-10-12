@@ -120,8 +120,8 @@ section { position: relative; z-index: 1; padding-block: var(--s-9); }
 .hero .tags { margin: var(--s-5) 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0 1.1rem; font-weight: 600; font-size: var(--fs-0); }
 .hero .tags a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-soft); text-decoration: underline; text-decoration-style: dashed; text-decoration-color: var(--pink); text-underline-offset: 6px; text-decoration-thickness: 2px; }
 .hero .tags a:hover { color: var(--pink-deep); }
-.fan { position: relative; aspect-ratio: 1 / 1.02; }
-.fan .sticker { position: absolute; transform: rotate(var(--r)); }
+.fan { position: relative; aspect-ratio: 1 / 1.1; }
+.fan .sticker { position: absolute; left: var(--l); top: var(--t); width: var(--w); transform: rotate(var(--r)); }
 .fan .sticker img { width: 100%; }
 .fan .tag { position: absolute; left: 10px; bottom: 10px; padding: .3rem .7rem; border-radius: var(--r-pill); background: rgba(255,255,255,.94); color: var(--ink); font: 700 .78rem/1 var(--font-body); letter-spacing: .02em; box-shadow: 0 2px 8px -2px rgba(58,36,51,.3); pointer-events: none; }
 @media (hover: hover) {
@@ -274,6 +274,10 @@ section { position: relative; z-index: 1; padding-block: var(--s-9); }
   .site-footer .container { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
+  /* celular: 7 peças, em 3 fileiras */
+  .fan .sticker { left: var(--ml); top: var(--mt); width: var(--mw); }
+  .fan .so-desk { display: none; }
+  .fan { aspect-ratio: 1 / 1.15; }
   section { padding-block: var(--s-8); }
   .menu-btn { display: block; }
   .nav { position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); flex-direction: column; align-items: stretch; gap: 0; padding: var(--s-3) var(--gutter) var(--s-5); border-bottom: 1px dashed var(--line); display: none; }
