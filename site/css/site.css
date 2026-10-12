@@ -112,18 +112,22 @@ section { position: relative; z-index: 1; padding-block: var(--s-9); }
 }
 
 /* ---------- hero ---------- */
-.hero { padding-block: var(--s-8) var(--s-9); overflow: clip; }
-.hero .container { display: grid; grid-template-columns: 1.05fr 1fr; gap: var(--s-8); align-items: center; }
+.hero { padding-block: var(--s-7) var(--s-8); overflow: clip; }
+.hero .container { display: grid; grid-template-columns: .9fr 1.1fr; gap: var(--s-7); align-items: center; }
 .hero h1 { margin-bottom: var(--s-5); }
 .hero .lede { margin-bottom: var(--s-6); }
 .hero .actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 .hero .tags { margin: var(--s-5) 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0 1.1rem; font-weight: 600; font-size: var(--fs-0); }
 .hero .tags a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-soft); text-decoration: underline; text-decoration-style: dashed; text-decoration-color: var(--pink); text-underline-offset: 6px; text-decoration-thickness: 2px; }
 .hero .tags a:hover { color: var(--pink-deep); }
-.fan { position: relative; aspect-ratio: 1 / 1.1; }
-.fan .sticker { position: absolute; left: var(--l); top: var(--t); width: var(--w); transform: rotate(var(--r)); }
-.fan .sticker img { width: 100%; }
-.fan .tag { position: absolute; left: 10px; bottom: 10px; padding: .3rem .7rem; border-radius: var(--r-pill); background: rgba(255,255,255,.94); color: var(--ink); font: 700 .78rem/1 var(--font-body); letter-spacing: .02em; box-shadow: 0 2px 8px -2px rgba(58,36,51,.3); pointer-events: none; }
+.fan { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3); }
+.fan .sticker { position: relative; transform: rotate(var(--r)); padding: 5px; border-radius: 18px; }
+.fan .sticker.big { grid-column: 1 / span 2; grid-row: 1 / span 2; padding: 7px; border-radius: 24px; }
+.fan .sticker img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 13px; display: block; }
+.fan .sticker.big img { border-radius: 18px; }
+.hero .pontos { list-style: none; margin: var(--s-6) 0 0; padding: var(--s-4) 0 0; border-top: 1px dashed var(--line); display: grid; gap: .55rem; font-size: var(--fs-0); color: var(--ink-soft); }
+.hero .pontos strong { color: var(--ink); }
+.fan .tag { position: absolute; left: 10px; bottom: 10px; padding: .25rem .6rem; border-radius: var(--r-pill); background: rgba(255,255,255,.94); color: var(--ink); font: 700 .78rem/1 var(--font-body); letter-spacing: .02em; box-shadow: 0 2px 8px -2px rgba(58,36,51,.3); pointer-events: none; }
 @media (hover: hover) {
   .fan .sticker:hover { transform: translateY(-8px) rotate(calc(var(--r) + 1.5deg)); z-index: 5; }
 }
@@ -290,10 +294,11 @@ section { position: relative; z-index: 1; padding-block: var(--s-9); }
   .site-footer .container { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  /* celular: 7 peças, em 3 fileiras */
-  .fan .sticker { left: var(--ml); top: var(--mt); width: var(--mw); }
-  .fan .so-desk { display: none; }
-  .fan { aspect-ratio: 1 / 1.15; }
+  /* celular: 3 colunas, a foto grande ocupa 2x2 */
+  .fan { grid-template-columns: repeat(3, 1fr); gap: var(--s-2); }
+  .fan .sticker { padding: 4px; border-radius: 14px; }
+  .fan .sticker img { border-radius: 10px; }
+  .fan .tag { left: 6px; bottom: 6px; font-size: .66rem; padding: .22rem .5rem; }
   section { padding-block: var(--s-8); }
   .menu-btn { display: block; }
   .nav { position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); flex-direction: column; align-items: stretch; gap: 0; padding: var(--s-3) var(--gutter) var(--s-5); border-bottom: 1px dashed var(--line); display: none; }
